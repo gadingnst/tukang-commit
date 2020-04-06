@@ -1,4 +1,4 @@
-name: Tukang commit
+name: Tukang Commit
 
 on:
   push:
@@ -6,20 +6,21 @@ on:
       - master
       
   schedule:
-  - cron: "* * * * 10"
+    - cron: "3 * * * *"
 
 jobs:
-  bot_task:
+  auto-commit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2      
         with:
-         persist-credentials: false
-         fetch-depth: 0
+          persist-credentials: false
+          fetch-depth: 0
           
       - name: Run Bot Task
         run: |
-          sh ./bot.sh
+          chmod +x ./task.sh
+          ./task.sh
           
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.5.0
