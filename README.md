@@ -10,6 +10,7 @@ A bot that can make your Github stats green with scheduled auto commit.
 - Change the scheduling time on file `bot.yml`. **Example: You can try to run it in every hour with string `1 * * * *`**.
 
 # Docs
+Initial docs
 
 ## LICENSE
 MIT
