@@ -1,0 +1,2 @@
+- name: Notify PR
+  uses: okteto/notify-pr@v1.0
