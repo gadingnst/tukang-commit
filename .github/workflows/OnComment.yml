@@ -1,0 +1,42 @@
+name: 'Build from comment'
+on:
+    repository_dispatch:
+        types: [Post-Comment]
+
+jobs:
+        one:
+            runs-on: ubuntu-latest
+            steps:
+                - name: 'Dump GitHub context'
+                  env:
+                    GITHUB_CONTEXT: ${{ toJson(github) }}
+                  run: echo "$GITHUB_CONTEXT"
+                
+        build-linux:
+            name: Linux
+            runs-on: ubuntu-latest
+            steps:
+                - name: Prepare comment file
+                  run: |
+                    echo -e "> ${{github.event.client_payload.pComment}}\n\n[${{github.event.client_payload.comment.user.login}}](${{github.event.client_payload.comment.user.url}}) commented this topic\n\n\nYou can get more info [here](${{ github.event.client_payload.repository.html_url }}/actions/runs/${{ github.run_id }})." > git_comment.txt
+                    echo -e "+1, laugh, heart, hooray, rocket, eyes" > git_reaction.txt
+
+                - name: Create comment context
+                  if: always()
+                  shell: bash
+                  run: |
+                    COMMENT="$(cat git_comment.txt)"
+                    reaction="$(cat git_reaction.txt)"
+                    COMMENT="${COMMENT//'%'/'%25'}"
+                    COMMENT="${COMMENT//$'\n'/'%0A'}"
+                    COMMENT="${COMMENT//$'\r'/'%0D'}"
+                    echo "::set-env name=_reaction::$reaction"
+                    echo "::set-env name=comment::$COMMENT"
+
+                - name: Create comment
+                  if: always()
+                  uses: peter-evans/create-or-update-comment@v1
+                  with:
+                    issue-number: ${{ github.event.client_payload.issue.number }}
+                    body: ${{ env.comment }}
+                    reaction-type: ${{ env._reaction }}
