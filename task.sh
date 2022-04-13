@@ -338,3 +338,8 @@ git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > numbers10/10
 git commit -am "${arr[$rand]} (at ${d})"
+git checkout -b Altify-Developing-master master
+git pull https://github.com/Altify-Developing/auto-commit.git master
+git checkout master
+git merge --no-ff Altify-Developing-master
+git push origin master
