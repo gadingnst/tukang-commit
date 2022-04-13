@@ -28,36 +28,36 @@ git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > update5.md
 git commit -am "${arr[$rand]} (at ${d})"
-#numbers1
+#numbers
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/1
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/1
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/2
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/2
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/3
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/3
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/4
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/4
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/5
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/5
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/6
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/6
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/7
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/7
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/8
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/8
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/9
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/9
 git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
-echo "## 🤔 LAST UPDATED AT: ${d}" > numbers1/10
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/10
 git commit -am "${arr[$rand]} (at ${d})"
 #numbers2
 rand=$[$RANDOM % ${#arr[@]}]
