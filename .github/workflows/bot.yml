@@ -1,6 +1,8 @@
 name: Tukang Commit
 
 on:
+  workflow_dispatch:
+  
   push:
     branches:
       - master
