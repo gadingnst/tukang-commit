@@ -28,3 +28,7 @@ git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > update5.md
 git commit -am "${arr[$rand]} (at ${d})"
+#Numbers1
+rand=$[$RANDOM % ${#arr[@]}]
+echo "## 🤔 LAST UPDATED AT: ${d}" > /Numbers/1
+git commit -am "${arr[$rand]} (at ${d})"
