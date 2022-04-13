@@ -32,3 +32,6 @@ git commit -am "${arr[$rand]} (at ${d})"
 rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/1
 git commit -am "${arr[$rand]} (at ${d})"
+rand=$[$RANDOM % ${#arr[@]}]
+echo "## 🤔 LAST UPDATED AT: ${d}" > numbers/2
+git commit -am "${arr[$rand]} (at ${d})"
