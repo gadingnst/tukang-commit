@@ -13,10 +13,11 @@ rand=$[$RANDOM % ${#arr[@]}]
 d=`date '+%Y-%m-%dT%H:%M:%SZ'`
 
 echo "## 🤔 LAST UPDATED AT: ${d}" > update.md
+git config --local user.email "Altify@mail.com"
+git config --local user.name "Altify-Development"
+git commit -am "${arr[$rand]} (at ${d})"
 echo "## 🤔 LAST UPDATED AT: ${d}" > update2.md
 echo "## 🤔 LAST UPDATED AT: ${d}" > update3.md
 echo "## 🤔 LAST UPDATED AT: ${d}" > update4.md
 echo "## 🤔 LAST UPDATED AT: ${d}" > update5.md
-git config --local user.email "Altify@mail.com"
-git config --local user.name "Altify-Development"
 git commit -am "${arr[$rand]} (at ${d})"
