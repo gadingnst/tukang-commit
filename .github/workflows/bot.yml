@@ -1,4 +1,4 @@
-name: Tukang Commit
+name: AutoCommit-v2
 
 on:
   workflow_dispatch:
