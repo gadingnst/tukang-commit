@@ -16,11 +16,15 @@ echo "## 🤔 LAST UPDATED AT: ${d}" > update.md
 git config --local user.email "Altify@mail.com"
 git config --local user.name "Altify-Development"
 git commit -am "${arr[$rand]} (at ${d})"
+rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > update2.md
 git commit -am "${arr[$rand]} (at ${d})"
+rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > update3.md
 git commit -am "${arr[$rand]} (at ${d})"
+rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > update4.md
 git commit -am "${arr[$rand]} (at ${d})"
+rand=$[$RANDOM % ${#arr[@]}]
 echo "## 🤔 LAST UPDATED AT: ${d}" > update5.md
 git commit -am "${arr[$rand]} (at ${d})"
