@@ -1,12 +1,14 @@
-name: Tukang Commit
+name: AutoCommit-v2
 
 on:
+  workflow_dispatch:
+  
   push:
     branches:
       - master
       
   schedule:
-    - cron: "3 * * * *"
+    - cron:  '*/1 * * * *'
 
 jobs:
   auto-commit:
@@ -23,8 +25,7 @@ jobs:
           ./task.sh
           
       - name: GitHub Push
-        uses: ad-m/github-push-action@v0.5.0
+        uses: ad-m/github-push-action@v0.6.0
         with:
           force: true
-          directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
